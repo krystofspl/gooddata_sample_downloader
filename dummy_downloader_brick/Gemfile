@@ -1,0 +1,4 @@
+source 'https://rubygems.org'
+
+gem 'gooddata_connectors_sdk'
+gem 'gooddata_connectors_downloader_dummy', :git => 'git_path_to_the_downloader', :branch => 'branch_if_needed'

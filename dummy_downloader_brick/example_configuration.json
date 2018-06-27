@@ -1,0 +1,27 @@
+{
+  "entities": {
+    "entity_1": {
+      "global": {
+        "custom": {
+          "fields": [
+            {
+              "name": "id",
+              "type": "integer"
+            }
+          ],
+          "hub": [
+            "id"
+          ]
+        }
+      }
+    }
+  },
+  "downloaders": {
+    "dummy_downloader_1": {
+      "type": "dummy",
+      "entities": [
+        "entity_1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type" :"object",
+  "additionalProperties": true,
+  "properties": {
+    "options": {
+      "type" :"object",
+      "required": ["sample_param"],
+      "properties": {
+        "full": {},
+        "sample_param": {}
+      }
+    }
+  }
+}
