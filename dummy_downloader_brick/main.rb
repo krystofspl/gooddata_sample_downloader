@@ -26,7 +26,7 @@ stack = [
   AWSMiddleware,
   WarehouseMiddleware,
   GoodData::Connectors::Metadata::MetadataMiddleware,
-  GoodData::Connectors::CiashopDownloader::CiashopDownloaderMiddleWare,
+  GoodData::Connectors::DummyDownloader::DummyDownloaderMiddleWare,
   ExecuteBrick
 ]
 
