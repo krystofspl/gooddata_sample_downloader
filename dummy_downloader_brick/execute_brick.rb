@@ -1,20 +1,14 @@
 # encoding: utf-8
 
-require 'gooddata_connectors_base'
-require 'gooddata_connectors_downloader_dummy/version'
-require 'gooddata_connectors_downloader_dummy/dummy_downloader'
+module GoodData::Bricks
+  class ExecuteBrick < GoodData::Bricks::Brick
+    def call(params)
+      metadata = params['metadata_wrapper']
+      downloader = params['dummy_downloader_wrapper']
+      raise Exception, 'The schedule parameters must contain ID of the downloader' unless params.include?('ID')
+      metadata.set_source_context(params['ID'], {}, downloader, false)
 
-module GoodData
-  module Connectors
-    module DummyDownloader
-      class DummyDownloaderMiddleware < GoodData::Bricks::Middleware
-        def call(params)
-          $log = params['GDC_LOGGER']
-          $log.info 'Initializing DummyDownloaderMiddleware'
-          dummy_downloader = DownloaderDummy.new(params['metadata_wrapper'], params)
-          @app.call(params.merge('dummy_downloader_wrapper' => dummy_downloader))
-        end
-      end
+      downloader.download_data
     end
   end
 end
