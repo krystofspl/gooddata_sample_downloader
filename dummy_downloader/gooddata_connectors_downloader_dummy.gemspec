@@ -1,4 +1,7 @@
-# coding: utf-8
+# Copyright (c) 2018, GoodData Corporation. All rights reserved.
+# This source code is licensed under the BSD-style license found in the
+# LICENSE file in the root directory of this source tree.
+
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'gooddata_connectors_downloader_dummy/version'

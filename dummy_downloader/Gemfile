@@ -2,5 +2,5 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'gooddata_connectors_sdk', '~> 1.0.0'
+gem 'gooddata_connectors_sdk', '~> 1.1.3'
 

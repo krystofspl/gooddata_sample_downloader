@@ -11,7 +11,7 @@ module GoodData
         require_relative 'helpers/metadata_helper'
         include Helpers::MetadataHelper
 
-        TYPE = 'dummy'.freeze
+        TYPE = 'dummy'.freeze # Set this to a unique identifier - 6 or less a-z characters
 
         attr_accessor :runtime_cache
 
